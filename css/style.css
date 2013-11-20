@@ -1,0 +1,119 @@
+.container {
+	width: 1000px;
+	margin: 20px auto 20px auto;
+	background:#FFFFEE;	
+	padding: 20px;
+	box-shadow:10px 10px 5px rgba(128,128,128,0.2);
+	border:1px solid #CCCC00;
+	font-family: Arial;
+	padding: 0px 40px 0px 40px;
+}
+
+h1, h2 {
+	color: #FD0006;
+}
+
+h3, h4, h5 {
+	color: #4577D4;
+}
+
+/*===================
+	Header
+====================*/
+
+#header {
+	border-top: 2px solid red;
+	border-bottom: 2px solid red;
+	margin: 20px 0px 20px 0px;
+	text-align: center;
+}
+
+
+#header h1 {
+	font-size: 46px;
+}
+
+#header h2#motd {
+	color: #4577D4;
+	font-size: 24px;
+}
+
+#header img {
+	width: 200px;
+}
+
+/* override bootstrap */
+.nav-tabs > li.active > a {
+	border-color: #FD0006;
+	border-bottom-color: transparent;
+}
+
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:active {
+	color: #4577D4;
+	border: 1px solid #4577D4;
+	border-bottom-color: transparent;
+}
+
+#form-login input{
+	width: 100px;
+}
+
+
+/*===================
+	Sidebar
+====================*/
+
+#sidebar {
+	padding-left: 20px
+}
+
+/*===================
+	Content
+====================*/
+
+#content {
+	padding: 20px;
+}
+
+.address {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.address p {
+	line-height: 0.5;
+}
+
+.car-item {
+	background: #FFF;
+	border: 1px solid #CCCC00;
+	margin: 15px;
+	padding: 15px;
+}
+
+.car-price {
+	font-size: 20px;
+}
+
+/*===================
+	Footer
+====================*/
+
+#footer {
+	font-size: 12px;
+	margin-top: 80px;
+}
+
+/*
+
+.calculatorOutput {
+	display: none;
+	font-size: 24px;
+	color: red;
+}
+
+
+
+*/

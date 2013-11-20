@@ -1,0 +1,1 @@
+<em>partials/logout.php: This is a placeholder for the logout form.</em>
