@@ -10,7 +10,7 @@ try{
 	$password = $_POST['password'];
 	//searches for an entry matching the username entered in the database.
 	$query = $db->query("SELECT * FROM person WHERE username='$username'");
-	//check if there is a row returned (a.k.a if the entry exists)
+	//check if there is a row returned (i.e. if the entry exists)
 	$numrows = mysqli_num_rows($query);
 	//Check if username and password exist in the database
 	if ($numrows != 0 ){
@@ -21,7 +21,6 @@ try{
 			echo '<pre>$_POST contains: ';
 			print_r($_POST);
 			echo '</pre>';
-	
 		}
 		else{
 			die("incorrect password!");
