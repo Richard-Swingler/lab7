@@ -37,7 +37,7 @@ try{
 	
 	print_r($_SESSION);
 
-
+	echo "</br>You have now logged in carry on to the <a href='index.php'>Homepage</a>";
 	
 }
 catch(Exception $e){
