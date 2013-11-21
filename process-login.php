@@ -9,10 +9,32 @@ try{
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	
+	$query = $db->query("SELECT * FROM person WHERE username='$username'");
+	$numrows = mysqli_num_rows($query);
 	
-	echo '<pre>$_POST contains: ';
-		print_r($_POST);
-	echo '</pre>';
+	if ($numrows != 0 ){
+
+		$row = mysqli_fetch_assoc($query);
+		
+		if($password == $row['password']){
+			echo '<pre>$_POST contains: ';
+			print_r($_POST);
+			echo '</pre>';
+	
+		}
+		else{
+			die("incorrect username/password!");
+		}
+	}
+	else{
+		die("incorrect username/password!");
+	}
+
+	
+	
+
+
+	
 }
 catch(Exception $e){
 	echo $e->getMessage();
