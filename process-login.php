@@ -8,10 +8,11 @@ try{
 	
 	$username = $_POST['username'];
 	$password = $_POST['password'];
-	
+	//searches for an entry matching the username entered in the database.
 	$query = $db->query("SELECT * FROM person WHERE username='$username'");
+	//check if there is a row returned (a.k.a if the entry exists)
 	$numrows = mysqli_num_rows($query);
-	
+	//Check if username and password exist in the database
 	if ($numrows != 0 ){
 
 		$row = mysqli_fetch_assoc($query);
@@ -23,15 +24,19 @@ try{
 	
 		}
 		else{
-			die("incorrect username/password!");
+			die("incorrect password!");
 		}
 	}
 	else{
-		die("incorrect username/password!");
+		die("incorrect username");
 	}
-
+	//Side-note a bit insecure tro mention that only one of the two credentials are wrong as it could help intruders deduce usernames or guess password.
+	//assign id, logged and username to session
+	$_SESSION["loggedIn"] = true;
+	$_SESSION["username"] = $username;
+	$_SESSION["person_id"] = $row['id'];
 	
-	
+	print_r($_SESSION);
 
 
 	
